@@ -20,13 +20,12 @@ public class ContactosService {
 	Path DIR= Paths.get("c:\\temp\\contactos.txt");
 	
 	
-	public ContactosService() throws NoExisteAlmacenamientoException {
+	public ContactosService()  {
 		if (!Files.exists(DIR)) {
 			try {
 				Files.createFile(DIR);
 			} catch (IOException e) {
 				e.printStackTrace();
-				throw new NoExisteAlmacenamientoException();
 			}
 		}
 	}
