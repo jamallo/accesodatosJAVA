@@ -18,6 +18,7 @@ public class Lanzador {
 				service.guardarPais(p);
 			}
 		});
+		System.out.println("Tarea completada!");
 	}
 
 }
