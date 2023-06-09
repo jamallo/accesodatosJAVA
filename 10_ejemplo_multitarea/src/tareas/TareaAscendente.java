@@ -1,6 +1,5 @@
 package tareas;
 
-import java.util.Iterator;
 
 public class TareaAscendente extends Thread {
 
