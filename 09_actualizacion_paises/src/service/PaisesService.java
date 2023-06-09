@@ -2,6 +2,7 @@ package service;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -79,6 +80,16 @@ public class PaisesService {
 		} catch(SQLException ex) {
             ex.printStackTrace();
 		}   
+	}
+	//para procedimientos almacenados en la base de datos
+	public void borrarTablaPaises() {
+		try(Connection con = DriverManager.getConnection(url, usuario, password)){
+			String proc = "{call borrarTodo()}";
+			CallableStatement cs = con.prepareCall(proc);
+			cs.execute();
+		} catch(SQLException ex) {
+            ex.printStackTrace();
+		}
 	}
 }
 
