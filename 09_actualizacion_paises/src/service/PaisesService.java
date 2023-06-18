@@ -18,7 +18,7 @@ import model.Pais;
 public class PaisesService {
 
 	private final String DIR = "D:\\Curso Certificado\\JAVA SE 8\\EJERCICIOS\\Ficheros_datos\\paises.json";
-	String url = "jdbc:mysql://localhost:3306/agenda";
+	String url = "jdbc:mysql://localhost:3306/mundo";
 	String usuario = "root";
 	String password = "root";
 
